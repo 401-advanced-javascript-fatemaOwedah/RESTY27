@@ -26,7 +26,7 @@
 
 #### Deployment
 - [GH-Pages](https://401-advanced-javascript-fatemaowedah.github.io/RESTY27/)
-
+- [Netlify](https://resty-27.netlify.app/)
 
 #### UML
 ![UML](/assets/lab27.jpeg)
