@@ -4,7 +4,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/RESTY27/pull/1)
+- [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/RESTY27/pull/2)
 
 #### Documintation
 
@@ -15,13 +15,14 @@
 
 
 #### How to initialize/run your application 
-- cd my-app
 - npm start
+- npm run test ====> for testing
 
 
 #### How do I install the app or library
 - npm init -y 
+- npm i 
 
 
 #### UML
-![UML](/assets/lab26.jpeg)
+![UML](/assets/lab27.jpeg)
