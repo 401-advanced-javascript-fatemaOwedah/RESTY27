@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/RESTY27/static/css/main.deb73a8a.chunk.css",
+    "main.js": "/RESTY27/static/js/main.44040e3a.chunk.js",
+    "main.js.map": "/RESTY27/static/js/main.44040e3a.chunk.js.map",
+    "runtime-main.js": "/RESTY27/static/js/runtime-main.858848d2.js",
+    "runtime-main.js.map": "/RESTY27/static/js/runtime-main.858848d2.js.map",
+    "static/js/2.e37d5b6a.chunk.js": "/RESTY27/static/js/2.e37d5b6a.chunk.js",
+    "static/js/2.e37d5b6a.chunk.js.map": "/RESTY27/static/js/2.e37d5b6a.chunk.js.map",
+    "index.html": "/RESTY27/index.html",
+    "precache-manifest.e10563ae258dfed23b4b7d07376af957.js": "/RESTY27/precache-manifest.e10563ae258dfed23b4b7d07376af957.js",
+    "service-worker.js": "/RESTY27/service-worker.js",
+    "static/css/main.deb73a8a.chunk.css.map": "/RESTY27/static/css/main.deb73a8a.chunk.css.map",
+    "static/js/2.e37d5b6a.chunk.js.LICENSE.txt": "/RESTY27/static/js/2.e37d5b6a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.858848d2.js",
+    "static/js/2.e37d5b6a.chunk.js",
+    "static/css/main.deb73a8a.chunk.css",
+    "static/js/main.44040e3a.chunk.js"
+  ]
+}
