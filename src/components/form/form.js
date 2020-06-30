@@ -47,7 +47,6 @@ class Form extends React.Component {
     const method = e.target.id;
     this.setState({ method });
   };
-
   render() {
     return (
       <>
