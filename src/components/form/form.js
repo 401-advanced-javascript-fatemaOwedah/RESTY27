@@ -22,8 +22,10 @@ class Form extends React.Component {
 
       let count = data.count;
       let results = data.results;
-
-      let headerss = {'content-type': raw.headers.get('content-type')};
+      let headerss = {};
+      raw.headers.forEach((val, key) =>{
+        headerss[key] = val;
+      })
       console.log(headerss);
       
 
