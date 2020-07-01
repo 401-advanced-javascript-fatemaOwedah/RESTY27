@@ -8,32 +8,25 @@ class Form extends React.Component {
     super(props);
     this.state = {
       url: '',
-      method: '',
-      request: {},
+      method: ''
     };
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
 
     if ( this.state.url && this.state.method ) {
 
-      // Make an object that would be suitable for superagent
-      let request = {
-        url: this.state.url,
-        method: this.state.method,
-      };
+      let raw = await fetch(this.state.url); // star wars API
+      let data = await raw.json();
 
-      // Clear old settings
-      let url = '';
-      let method = '';
+      let count = data.count;
+      let headers = { 'Content-Type': 'application/json' }
+      let results = data.results;
 
-      this.setState({request, url, method});
-      e.target.reset();
+      this.props.handler(count, headers, results);
 
-    }
-
-    else {
+    }else {
       alert('missing information');
     }
   }
@@ -64,10 +57,6 @@ class Form extends React.Component {
             <span className={this.state.method === 'delete' ? 'active' : ''} id="delete" onClick={this.handleChangeMethod}>DELETE</span>
           </label>
         </form>
-        <section className="results">
-          <span className="method">{this.state.request.method}</span>
-          <span className="url">{this.state.request.url}</span>
-        </section>
       </>
     );
   }

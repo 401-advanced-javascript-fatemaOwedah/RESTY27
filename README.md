@@ -29,4 +29,4 @@
 - [Netlify](https://resty-27.netlify.app/)
 
 #### UML
-![UML](/assets/lab27.jpeg)
+![UML](/assets/lab28.jpeg)
