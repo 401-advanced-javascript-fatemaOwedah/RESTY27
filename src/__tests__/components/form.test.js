@@ -41,57 +41,6 @@ describe('<Form />' , ()=>{
     expect(app.state('method')).toEqual('delete');
     expect(app.state('url')).toEqual('https://localhost:3000');
    });
-
-   it('Does it properly display the users input in the output area on form submit',()=>{
-      let app = shallow(<Form/>);
-      expect(app.find('.url').exists()).toBeTruthy();
-      expect(app.find('.method').exists()).toBeTruthy();
-   });
-
-   it('Does it properly clear the form/state after the form is submitted',()=>{
-     let app = mount(<Form/>);
-     let input = app.find('input');
-     let method = app.find('#get');
-     let submit = app.find('form');
-     input.simulate('change',{target:{value:'https://localhost:3000'}});
-     method.simulate('click');
-     submit.simulate('submit');
-     expect(app.state('method')).toEqual('');
-     expect(app.state('url')).toEqual('');
-   });
-   it('Does it properly clear the form/state after the form is submitted',()=>{
-    let app = mount(<Form/>);
-    let input = app.find('input');
-    let method = app.find('#post');
-    let submit = app.find('form');
-    input.simulate('change',{target:{value:'https://localhost:3000'}});
-    method.simulate('click');
-    submit.simulate('submit');
-    expect(app.state('method')).toEqual('');
-    expect(app.state('url')).toEqual('');
-  });
-  it('Does it properly clear the form/state after the form is submitted',()=>{
-    let app = mount(<Form/>);
-    let input = app.find('input');
-    let method = app.find('#put');
-    let submit = app.find('form');
-    input.simulate('change',{target:{value:'https://localhost:3000'}});
-    method.simulate('click');
-    submit.simulate('submit');
-    expect(app.state('method')).toEqual('');
-    expect(app.state('url')).toEqual('');
-  });
-  it('Does it properly clear the form/state after the form is submitted',()=>{
-    let app = mount(<Form/>);
-    let input = app.find('input');
-    let method = app.find('#delete');
-    let submit = app.find('form');
-    input.simulate('change',{target:{value:'https://localhost:3000'}});
-    method.simulate('click');
-    submit.simulate('submit');
-    expect(app.state('method')).toEqual('');
-    expect(app.state('url')).toEqual('');
-  });
   it('Do the method selectors/checkboxes obey your styling rules',()=>{
     let app = mount(<Form/>);
     let method = app.find('#get');
