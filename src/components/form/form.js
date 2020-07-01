@@ -8,23 +8,29 @@ class Form extends React.Component {
     super(props);
     this.state = {
       url: '',
-      method: ''
+      method: 'get'
     };
   }
 
   handleSubmit = async e => {
     e.preventDefault();
 
-    if ( this.state.url && this.state.method ) {
+    if ( this.state.url && this.state.method) {
 
       let raw = await fetch(this.state.url); // star wars API
       let data = await raw.json();
 
       let count = data.count;
-      let headers = { 'Content-Type': 'application/json' }
       let results = data.results;
 
-      this.props.handler(count, headers, results);
+      let headerss = {};
+      raw.headers.forEach((val, key)=>{
+        headerss[key] = val;
+      })
+      console.log(headerss);
+      
+
+      this.props.handler( count, headerss, data, results);
 
     }else {
       alert('missing information');
