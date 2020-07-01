@@ -13,13 +13,12 @@ class App extends React.Component {
     this.state = {
         // key and value pairs
         count: 0,
-        results: [],
-        headers: {}
+        results: []
     };
 }
   // method to be passed to form
-  handleForm = (count, headers, results) => {
-  this.setState({count, headers, results});
+  handleForm = (count, headerss,data, results) => {
+  this.setState({count, headerss,data, results});
   // {count: count , headers:headers , results:results}
 }
   render(){
@@ -27,7 +26,7 @@ class App extends React.Component {
       <React.Fragment>
         <Header />
         <Form handler={this.handleForm}/>
-        <Results count={this.state.count} headers={this.state.headers} results={this.state.results} />
+        <Results count={this.state.count} headerss={this.state.headerss} results={this.state.results} />
         <Footer />
       </React.Fragment>
     );
