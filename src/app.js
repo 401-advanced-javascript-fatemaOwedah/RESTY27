@@ -13,7 +13,6 @@ class App extends React.Component {
     this.state = {
         // key and value pairs
         count: 0,
-        headerss: {},
         results: []
     };
 }

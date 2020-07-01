@@ -8,7 +8,7 @@ const Result = (props) => {
     return (
         <section className="results">
             <span className="count">{props.count}</span>
-            <div className="method"><ReactView name='Headers' src={props.Header}/></div>
+            <div className="method"><ReactView name='Headers' src={props.headerss}/></div>
             <div className="url"><ReactView name='Response' src={props.results}/></div>
         </section>
     );
