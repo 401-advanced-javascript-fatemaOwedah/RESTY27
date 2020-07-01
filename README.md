@@ -4,7 +4,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/RESTY27/pull/2)
+- [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/RESTY27/pull/4)
 - [Git Hub-Action](https://github.com/401-advanced-javascript-fatemaOwedah/RESTY27/actions)
 
 #### Documintation
