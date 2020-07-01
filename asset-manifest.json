@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/RESTY27/static/css/main.929e6ba2.chunk.css",
-    "main.js": "/RESTY27/static/js/main.fed051b5.chunk.js",
-    "main.js.map": "/RESTY27/static/js/main.fed051b5.chunk.js.map",
-    "runtime-main.js": "/RESTY27/static/js/runtime-main.858848d2.js",
-    "runtime-main.js.map": "/RESTY27/static/js/runtime-main.858848d2.js.map",
-    "static/js/2.7e60eb48.chunk.js": "/RESTY27/static/js/2.7e60eb48.chunk.js",
-    "static/js/2.7e60eb48.chunk.js.map": "/RESTY27/static/js/2.7e60eb48.chunk.js.map",
-    "index.html": "/RESTY27/index.html",
-    "precache-manifest.72d74bb2e76da66d7aa23c9c2752729d.js": "/RESTY27/precache-manifest.72d74bb2e76da66d7aa23c9c2752729d.js",
-    "service-worker.js": "/RESTY27/service-worker.js",
-    "static/css/main.929e6ba2.chunk.css.map": "/RESTY27/static/css/main.929e6ba2.chunk.css.map",
-    "static/js/2.7e60eb48.chunk.js.LICENSE.txt": "/RESTY27/static/js/2.7e60eb48.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.929e6ba2.chunk.css",
+    "main.js": "/static/js/main.fed051b5.chunk.js",
+    "main.js.map": "/static/js/main.fed051b5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9513d861.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9513d861.js.map",
+    "static/js/2.7e60eb48.chunk.js": "/static/js/2.7e60eb48.chunk.js",
+    "static/js/2.7e60eb48.chunk.js.map": "/static/js/2.7e60eb48.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2c48fe43d2bffdd904a7a2dd1436b6bb.js": "/precache-manifest.2c48fe43d2bffdd904a7a2dd1436b6bb.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.929e6ba2.chunk.css.map": "/static/css/main.929e6ba2.chunk.css.map",
+    "static/js/2.7e60eb48.chunk.js.LICENSE.txt": "/static/js/2.7e60eb48.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.858848d2.js",
+    "static/js/runtime-main.9513d861.js",
     "static/js/2.7e60eb48.chunk.js",
     "static/css/main.929e6ba2.chunk.css",
     "static/js/main.fed051b5.chunk.js"
