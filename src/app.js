@@ -26,11 +26,12 @@ toggleLoading = () => {
   handleForm = (count, headerss,data, results) => {
   this.setState({count, headerss,data, results});
   // {count: count , headers:headers , results:results}
+localStorage.setItem('count', JSON.stringify(this.state.count));
+localStorage.setItem('headerss', JSON.stringify(this.state.headerss));
+localStorage.setItem('results', JSON.stringify(this.state.results));
+localStorage.setItem('data', JSON.stringify(this.state.data));
 }
-handelHistory = (method, url, data) => {
-  let me = JSON.stringify(data);
-  this.setState({ method, url, body: { me } });
-}
+
   render(){
     return (
       <React.Fragment>
@@ -40,12 +41,14 @@ handelHistory = (method, url, data) => {
           <Results loading={this.state.loading} count={this.state.count} results={this.state.results}  headerss={this.state.headerss} />
         </Route>
         <Route path="/history">
-          <History handel={this.handelHistory}/>
+          <History handel={this.results}/>
         </Route>
         <Footer />
       </React.Fragment>
     );
   }
+  
 }
+
 
 export default App;

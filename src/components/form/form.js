@@ -32,6 +32,7 @@ class Form extends React.Component {
 
       this.props.handler( count, headerss, data, results);
       this.props.toggleLoading();
+      
 
 
     }else {
