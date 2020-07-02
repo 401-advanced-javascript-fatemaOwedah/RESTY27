@@ -26,10 +26,7 @@ toggleLoading = () => {
   handleForm = (count, headerss,data, results) => {
   this.setState({count, headerss,data, results});
   // {count: count , headers:headers , results:results}
-localStorage.setItem('count', JSON.stringify(this.state.count));
-localStorage.setItem('headerss', JSON.stringify(this.state.headerss));
-localStorage.setItem('results', JSON.stringify(this.state.results));
-localStorage.setItem('data', JSON.stringify(this.state.data));
+
 }
 
   render(){

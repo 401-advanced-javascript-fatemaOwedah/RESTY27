@@ -2,6 +2,7 @@ import React from 'react';
 
 import './form.scss';
 
+let localArray= [];
 class Form extends React.Component {
 
   constructor(props) {
@@ -15,8 +16,106 @@ class Form extends React.Component {
   handleSubmit = async e => {
     e.preventDefault();
     this.props.toggleLoading();
+    if(this.state.url &&this.state.method ==='post'){
+      let dataBody = this.state.body.data;
+      console.log('llllllllllllllll',dataBody);
+      let response = await fetch(this.state.url, {
+        method: 'post',
+        mode:'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(dataBody),
+      });
+      console.log('kkkkkkkkkkk===',response);
+      let data = await response.json();
+      console.log('data========>', data);
+      let count = data.count;
+      let results = data.results;
+      let headerss = {};
+      response.headers.forEach((val, key) =>{
+        headerss[key] = val;
+      })
+      console.log(headerss);
+      
 
-    if ( this.state.url && this.state.method) {
+      this.props.handler( count, headerss, data, results);
+      this.props.toggleLoading();
+      
+      let final = {url:this.state.url, method:this.state.method};
+      localArray.push(final);
+      localStorage.setItem('localArray', JSON.stringify(localArray));
+    }else if(this.state.url &&this.state.method ==='put'){
+        let dataBody = this.state.body.data;
+        console.log('llllllllllllllll',dataBody);
+        let response = await fetch(this.state.url, {
+          method: 'put',
+          mode:'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(dataBody),
+        });
+        console.log('kkkkkkkkkkk===',response);
+        let data = await response.json();
+        console.log('data========>', data);
+        let count = data.count;
+        let results = data.results;
+        let headerss = {};
+        response.headers.forEach((val, key) =>{
+          headerss[key] = val;
+        })
+        console.log(headerss);
+        
+  
+        this.props.handler( count, headerss, data, results);
+        this.props.toggleLoading();
+        
+        let final = {url:this.state.url, method:this.state.method};
+        localArray.push(final);
+        localStorage.setItem('localArray', JSON.stringify(localArray));
+    }else if(this.state.url &&this.state.method ==='delete'){
+      let dataBody = this.state.body.data;
+      console.log('llllllllllllllll',dataBody);
+      let response = await fetch(this.state.url, {
+        method: 'delete',
+        mode:'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+      });
+      console.log('kkkkkkkkkkk===',response);
+      let data = await response.json();
+      console.log('data========>', data);
+      let count = data.count;
+      let results = data.results;
+      let headerss = {};
+      response.headers.forEach((val, key) =>{
+        headerss[key] = val;
+      })
+      console.log(headerss);
+      
+
+      this.props.handler( count, headerss, data, results);
+      this.props.toggleLoading();
+      
+      let final = {url:this.state.url, method:this.state.method};
+      localArray.push(final);
+      localStorage.setItem('localArray', JSON.stringify(localArray));
+  }else if ( this.state.url && this.state.method) {
+
 
       let raw = await fetch(this.state.url); // star wars API
       let data = await raw.json();
@@ -33,6 +132,9 @@ class Form extends React.Component {
       this.props.handler( count, headerss, data, results);
       this.props.toggleLoading();
       
+      let final = {url:this.state.url, method:this.state.method};
+      localArray.push(final);
+      localStorage.setItem('localArray', JSON.stringify(localArray));
 
 
     }else {
@@ -50,6 +152,12 @@ class Form extends React.Component {
     this.setState({ method });
   };
 
+  handleChangeText = e => {
+    let body = e.target.value;
+    let data = body;
+    this.setState({ body: { data } });
+  }; 
+
   render() {
     return (
       <>
@@ -65,6 +173,7 @@ class Form extends React.Component {
             <span className={this.state.method === 'put' ? 'active' : ''} id="put" onClick={this.handleChangeMethod}>PUT</span>
             <span className={this.state.method === 'delete' ? 'active' : ''} id="delete" onClick={this.handleChangeMethod}>DELETE</span>
           </label>
+          <textarea placeholder="Body" name="requestBody"  onChange={this.handleChangeText}></textarea>
         </form>
       </>
     );
