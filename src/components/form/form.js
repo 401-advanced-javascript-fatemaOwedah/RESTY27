@@ -14,6 +14,7 @@ class Form extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+    this.props.toggleLoading();
 
     if ( this.state.url && this.state.method) {
 
@@ -30,6 +31,8 @@ class Form extends React.Component {
       
 
       this.props.handler( count, headerss, data, results);
+      this.props.toggleLoading();
+
 
     }else {
       alert('missing information');

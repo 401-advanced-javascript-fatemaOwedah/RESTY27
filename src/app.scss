@@ -29,5 +29,36 @@ body {
     color: #eee;
     padding: 0;
     margin: 0;
+    h1{
+      margin-left: 2em;
+    }
+    nav{
+      width: 100%;
+      background-color: #dddddd;
+      padding-left: 4em;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li link {
+        display: block;
+        padding: 8px;
+        background-color: #dddddd;
+        margin: 15em , 15em;
+      }
+      li a {
+        display: block;
+        padding: 8px;
+        background-color: #dddddd;
+        margin: 15em , 15em;
+      }
+    }
   }
 }
